@@ -1,0 +1,52 @@
+body
+{
+background-image: url(); 
+background-repeat: no-repeat;
+}
+.dock_container
+{
+bottom: 0;
+text-align: center;
+position: fixed;
+ right: 10%; 
+ width: 80%; 
+ background: linear-gradient(-45deg, #24ff7147, #9b4eff52);
+  border-radius: 10px 10px 0 0;
+left: 10%;
+} 
+.dock_container li
+{
+list-style-type: none;
+display: inline-block;
+position: relative;
+} 
+.dock_container li img
+{
+width: 55px;
+height: 50px;
+ transition: all 0.4s;
+ transform-origin: 50% 100%;
+}
+.dock_container li:hover img {
+margin: 0 30px;
+ transform: scale(2);
+}
+.dock_container li:hover + li img,
+.dock_container li:prev img
+{
+margin: 0px 30px; transform: scale(1.5);
+}
+.dock_container li span{
+display: none;
+position: absolute;
+bottom: 110px;
+left: 0;
+width: 100%;
+background-color: red; 
+padding: 3px 0;
+border-radius: 10px;
+}
+.dock_container li:hover span
+{
+display: block; color: #fff
+}
